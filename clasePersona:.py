@@ -5,14 +5,14 @@ class Persona:
         self.genero = genero
         
     def presentarse(self):
-        print(f"Hola, mi nombre es {self.nombre} y tengo {self.edad} años.")
-        
+         print(f"Hola, mi nombre es {self.nombre} y tengo {self.edad} años.")
+
     def describir_genero(self):
-        if self.genero == "M":
+        if self._genero == "M":
             print("Soy un hombre.")
-        elif self.genero == "F":
+        elif self._genero == "F":
             print("Soy una mujer.")
-        elif  self.genero == "B":
+        elif  self._genero == "B":
             print("Soy una persona no binaria.")
          
 persona1 = Persona("Juan", 30, "M") 
@@ -25,14 +25,15 @@ persona2.describir_genero()  # Salida: Soy un mujer.
 
 #------------inheritence--------------
 class Estudiante(Persona):
-    def __init__(self, nombre, edad, genero, universidad):
+    def __init__(self, nombre, edad, genero, universidad,life):
         super().__init__(nombre, edad, genero)
-        self.universidad = universidad
+        self._universidad = universidad
+        self._life = life
         
     def estudiar(self):
-        print(f"Estoy estudiando en la universidad {self.universidad}.")
-
-estudiante1 = Estudiante("Ane", 20,"B" , "Universidad Nacional")
+        print(f"Estoy estudiando en la universidad {self.universidad}\nyo vivo en {self.life} ")
+        
+estudiante1 = Estudiante("Ane", 20,"B" , "Universidad Nacional","bogota")
 estudiante1.presentarse()  # Salida: Hola, mi nombre es Ana y tengo 20 años.
 estudiante1.describir_genero()  # Salida: Soy una mujer.
 estudiante1.estudiar()  # Salida: Estoy estudiando en la universidad Universidad Nacional.
