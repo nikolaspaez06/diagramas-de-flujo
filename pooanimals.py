@@ -1,28 +1,30 @@
 class Animals:
     def __init__(self,kind,respiration,birth):
-        self.kind = kind
-        self.respiration = respiration
-        self.birth = birth
-    def get_info(self):
-        return f"\n Tipo: {self.kind}\n Respiracion: {self.respiration}\n Nacimiento: {self.birth}"
-    def  get_kind(self, kind):
         self.__kind = kind
-    def get_respration(self):
+        self.__respiration = respiration
+        self.__birth = birth
+   
+    def get_info(self):
+        return f"\n Tipo: {self.__kind}\n Respiracion: {self.__respiration}\n Nacimiento: {self.__birth}"
+   
+    def set_kind(self, kind):
+        self.__kind = kind
+   
+    def set_respiration(self,respiration):
         self.__respiration = respiration
     
-    def get_birth(self):
-       self.__birth = birth 
+    def set_birth(self,birth):
+        self.__birth = birth 
     
     def get_kind(self):
-        return self.kind
+        return self.__kind
 
     def get_respration(self):
-        return self.respiration
+        return self.__respiration
     
     def get_birth(self):
-        return self.birth
-   
-   
+        return self.__birth
+
     
 
 
@@ -37,15 +39,16 @@ print(animal3.get_info())
 class   Bird(Animals):
     def __init__(self,kind,respiration,birth,eat):
        super().__init__(kind,respiration,birth)
-       self.eat = eat
+       self.__eat = eat
 
     def get_info(self):
-        return f"\n Tipo: {self.kind}\n Respiracion: {self.respiration}\n Nacimiento: {self.birth}\n Comer: {self.eat}"
+        return f"{super().get_info()}\n Comer: {self.__eat}"
+    
+    def set_eat(self, eat):
+        self.__eat = eat
+    
     def get_eat(self):
-        return self__eat
-    def get_comer(self):
-        return f"la {self.kind} come {self.eat}"
-   
+        return self.__eat
  
 
     
@@ -54,4 +57,4 @@ class   Bird(Animals):
 
 bird1 = Bird ("paloma", "pulmonar",  "oviparo", "fruta")
 print(bird1.get_info())
-print(bird1.get_comer())
+print(bird1.get_eat())

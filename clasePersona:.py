@@ -1,11 +1,11 @@
 class Persona:
     def __init__(self, nombre, edad, genero):
-        self.nombre = nombre
-        self.edad = edad
-        self.genero = genero
+        self._nombre = nombre
+        self._edad = edad
+        self._genero = genero
         
     def presentarse(self):
-         print(f"Hola, mi nombre es {self.nombre} y tengo {self.edad} años.")
+         print(f"Hola, mi nombre es {self._nombre} y tengo {self._edad} años.")
 
     def describir_genero(self):
         if self._genero == "M":
@@ -31,7 +31,7 @@ class Estudiante(Persona):
         self._life = life
         
     def estudiar(self):
-        print(f"Estoy estudiando en la universidad {self.universidad}\nyo vivo en {self.life} ")
+        print(f"Estoy estudiando en la universidad {self._universidad}\nyo vivo en {self._life} ")
         
 estudiante1 = Estudiante("Ane", 20,"B" , "Universidad Nacional","bogota")
 estudiante1.presentarse()  # Salida: Hola, mi nombre es Ana y tengo 20 años.
