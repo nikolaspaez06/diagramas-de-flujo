@@ -6,7 +6,8 @@ Aqui les traigo un pequeño proyecto hecho en Python donde podemos ver la progra
 Aqui los archivos van a estar comentados de las funciones que hacen cada uno espero que les gusten
 
 #Proyectos del repositorio (Contenido)
-.classPersona
-.poooanimals
-.poodrinks
-.poolibro
+
+- classPersona
+- poooanimals
+- poodrinks
+- poolibro
